@@ -6,7 +6,7 @@ import Lab3 from "./Lab3";
 export default function Labs() {
   return (
     <div>
-      <h1>Aravinda Aparma Velumuri</h1>
+      <h1>Aravinda Aparma Velumuri - Section 2</h1>
       <h1>Labs</h1>
       <TOC />
       <Routes>
