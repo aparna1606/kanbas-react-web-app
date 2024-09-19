@@ -9,7 +9,7 @@ export default function Dashboard() {
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
@@ -24,7 +24,7 @@ export default function Dashboard() {
             <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
@@ -41,7 +41,7 @@ export default function Dashboard() {
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
@@ -58,7 +58,7 @@ export default function Dashboard() {
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
@@ -75,7 +75,7 @@ export default function Dashboard() {
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
@@ -93,7 +93,7 @@ export default function Dashboard() {
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
@@ -110,7 +110,7 @@ export default function Dashboard() {
         <div className="wd-dashboard-course">
           <Link className="wd-dashboard-course-link"
                 to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" width={200} />
+            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
             <div>
               <h5>
                  CS1234 React JS
