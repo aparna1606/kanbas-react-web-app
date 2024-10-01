@@ -9,13 +9,10 @@ export default function Kanbas() {
       <div id="wd-kanbas">
         <h1>Kanbas</h1>
         {/* <h2><Account /></h2> */}
-        <table>
-          <tbody>
-            <tr>
-              <td valign="top">
+        
+            
                 <KanbasNavigation />
-              </td>
-              <td valign="top">
+              
       <Routes>
         <Route path="/" element={<Navigate to="Account" />} />
         <Route path="/Account/*" element={<Account />} />
@@ -24,10 +21,7 @@ export default function Kanbas() {
         <Route path="/Calendar" element={<h1>Calendar</h1>} />
         <Route path="/Inbox" element={<h1>Inbox</h1>} />
       </Routes> 
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              
         
       </div>
   );}
