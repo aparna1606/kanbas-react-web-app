@@ -1,135 +1,152 @@
-import { Link } from "react-router-dom";
 export default function Dashboard() {
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <h2 id="wd-dashboard-published">Published Courses (12)</h2> <hr />
-      <div id="wd-dashboard-courses">
-        {/* 1 */}
-        <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-
-            {/* 2 */}
-            <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
+      <h2 id="wd-dashboard-published">Published Courses (7)</h2> <hr />
+                    
+      <div id="wd-dashboard-courses" className="row">          
+      <div className="row row-cols-1 row-cols-md-5 g-4">
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
-
-        {/* 3 */}
-        <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
-        </div>
-
-        {/* 4 */}
-        <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
-        </div>
-
-        {/* 5 */}
-        <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
-        </div>
-
-
-        {/* 6 */}
-        <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
-        </div>
-
-        {/* 7 */}
-        <div className="wd-dashboard-course">
-          <Link className="wd-dashboard-course-link"
-                to="/Kanbas/Courses/1234/Home">
-            <img src="https://www.popwebdesign.net/popart_blog/wp-content/uploads/2018/03/reactjs.jpg" alt="reactsjs" width={200} />
-            <div>
-              <h5>
-                 CS1234 React JS
-                 </h5>
-              <p className="wd-dashboard-course-title">
-                Full Stack software developer
-              </p>
-              <button> Go </button>
-            </div>
-          </Link>
-        </div>
-
-
-          </Link>
-        </div>
-        <div className="wd-dashboard-course"> ... </div>
-        <div className="wd-dashboard-course"> ... </div>
       </div>
-    </div>
-  );
-}
 
+
+
+</div>
+<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+        </div>
+      </div>
+
+
+
+</div>
+<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+        </div>
+      </div>
+
+
+
+</div>
+<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+        </div>
+      </div>
+
+
+
+</div>
+<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+        </div>
+      </div>
+
+
+
+</div>
+<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+        </div>
+      </div>
+
+
+
+</div>
+<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+      <div className="card">
+        <img src="/logo192.png"/>
+        <div className="card-body">
+          <a className="wd-dashboard-course-link"
+             href="#/Kanbas/Courses/1234/Home"
+             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
+               CS1234 React JS
+          </a>
+          <p className="wd-dashboard-course-title card-text">
+            Full Stack software developer
+          </p>
+          <p>Fall 2024 Section 1</p>
+          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+        </div>
+      </div>
+
+
+
+</div>
+ </div>
+    </div>
+    </div>
+);}
