@@ -12,7 +12,7 @@ export default function CoursesNavigation() {
     rel="noreferrer"
     className="list-group-item bg-black border-0 text-center">
     <img src="/NEUlogo.jpg" width="75px"
-    alt = "NEU LOGO IMAGE" />
+    alt = "NEU LOGO" />
     </a>
   <Link to="/Kanbas/Account" id="wd-account-link"
     className="list-group-item text-center border-0 bg-black text-white">
