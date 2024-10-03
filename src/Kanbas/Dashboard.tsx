@@ -8,7 +8,7 @@ export default function Dashboard() {
       <div className="row row-cols-1 row-cols-md-5 g-4">
     <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -22,13 +22,11 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
-<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -42,13 +40,11 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
-<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -62,13 +58,11 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
-<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -82,13 +76,11 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
-<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -102,13 +94,11 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
-<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -122,13 +112,11 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
-<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
       <div className="card">
-        <img src="/logo192.png"/>
+        <img src="/logo192.png" alt="Course Logo" />
         <div className="card-body">
           <a className="wd-dashboard-course-link"
              href="#/Kanbas/Courses/1234/Home"
@@ -142,11 +130,10 @@ export default function Dashboard() {
           <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
         </div>
       </div>
+    </div>
 
-
-
-</div>
  </div>
     </div>
     </div>
-);}
+  );
+}

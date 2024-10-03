@@ -1,4 +1,4 @@
-import { FaCheckCircle, FaPlus } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import { IoEllipsisVertical } from "react-icons/io5";
 
 export default function AssignmentControlButtons() {
