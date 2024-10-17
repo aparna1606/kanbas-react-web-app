@@ -15,7 +15,8 @@ export default function Dashboard() {
   {courses.map((course) => (<div className="wd-dashboard-course col" style={{ width: "300px" }}>
   <Link to={`/Kanbas/Courses/${course._id}/Home`} className="text-decoration-none" >
         <div className="card rounded-3 overflow-hidden">
-          <img src="/logo192.png"/>
+          <img src="/logo192.png"
+          alt="react logo"/>
           <div className="card-body">
 
           <span className="wd-dashboard-course-link"

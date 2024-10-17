@@ -1,5 +1,5 @@
 import React from "react";
-import Math, { add, subtract, multiply, divide } from "./Maths";
+import Math, { add, subtract } from "./Maths";
 import * as Matematica from "./Maths";
 export default function DestructingImports() {
   return (

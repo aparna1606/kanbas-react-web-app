@@ -1,7 +1,6 @@
 import { BsGripVertical, BsBook } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa"
 import LessonControlButtons from "../Modules/LessonControlButtons";
-import ModuleControlButtons from "../Modules/ModuleControlButtons";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import assignments from "../../Database/assignments.json"
 import { useParams } from "react-router-dom";
