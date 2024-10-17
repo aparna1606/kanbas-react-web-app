@@ -26,10 +26,10 @@ export default function Signup() {
             Sign up
       </Link>
       
-      <Link id="wd-signin-link" 
+      {/* <Link id="wd-signin-link" 
             to="/Kanbas/Account/Signin">
             Sign in
-      </Link>
+      </Link> */}
     </div>
   );
 }
