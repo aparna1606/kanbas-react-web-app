@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { LiaBookSolid, LiaCogSolid } from "react-icons/lia";
 import { FaInbox, FaRegCircleUser, FaCalendar } from "react-icons/fa6";
 
-export default function CoursesNavigation() {
+export default function KanbasNavigation() {
+  const { pathname } = useLocation();
+  const links = [
+    { label: "Dashboard", path: "/Kanbas/Dashboard", icon: AiOutlineDashboard },
+    { label: "Courses",   path: "/Kanbas/Dashboard", icon: LiaBookSolid },
+    { label: "Calendar",  path: "/Kanbas/Calendar",  icon: FaCalendar },
+    { label: "Inbox",     path: "/Kanbas/Inbox",     icon: FaInbox },
+    { label: "Labs",      path: "/Labs",             icon: LiaCogSolid },
+  ];
+
   return (
     <div id="wd-kanbas-navigation" style={{ width: 120 }} 
      className="list-group rounded-0  position-fixed bottom-0 top-0 d-none d-md-block bg-black z-2">
@@ -14,31 +23,23 @@ export default function CoursesNavigation() {
     <img src="/NEUlogo.jpg" width="75px"
     alt = "NEU LOGO" />
     </a>
-  <Link to="/Kanbas/Account" id="wd-account-link"
-    className="list-group-item text-center border-0 bg-black text-white">
-    <FaRegCircleUser className="fs-1 text text-white" />
-    Account </Link>
-  <Link to="/Kanbas/Dashboard" id="wd-dashboard-link"
-    className="list-group-item text-center border-0
-               bg-white text-danger">
-    <AiOutlineDashboard className="fs-1 text-danger" />
-    Dashboard </Link>
-  <Link to="/Kanbas/Dashboard" id="wd-course-link"
-    className="list-group-item text-white
-               bg-black text-center border-0">
-    <LiaBookSolid className="fs-1 text-danger" />
-    Courses </Link>
-  <Link to="/Kanbas/Calendar" id="wd-course-calendar-link"
-    className="list-group-item text-white bg-black text-center border-0">
-    <FaCalendar className="fs-1 text-danger" />
-    Calendar </Link>
-  <Link to="/Kanbas/Inbox" id="wd-course-inbox-link"
-    className="list-group-item text-white bg-black text-center border-0">
-    <FaInbox className="fs-1 text-danger" />
-    Inbox </Link>
-  <Link to="/Kanbas/Labs/*" id="wd-course-labs-link"
-    className="list-group-item text-white bg-black text-center border-0">
-    <LiaCogSolid className="fs-1 text-danger" />
-    Labs </Link>
+    <Link to="/Kanbas/Account" className={`list-group-item text-center border-0 bg-black
+            ${pathname.includes("Account") ? "bg-white text-danger" : "bg-black text-white"}`}>
+        <FaRegCircleUser className={`fs-1 ${pathname.includes("Account") ? "text-danger" : "text-white"}`} />
+        <br />
+        Account
+      </Link>
+      {links.map((link) => (
+        <Link 
+        key={link.path} 
+        to={link.path} 
+        className={`list-group-item bg-black text-center border-0
+              ${pathname.includes(link.label) ? "text-danger bg-white" : "text-white bg-black"}`}>
+          {link.icon({ className: "fs-1 text-danger"})}
+          <br />
+          {link.label}
+        </Link>
+      ))}
+
 </div>
 );}

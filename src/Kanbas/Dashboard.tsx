@@ -1,139 +1,41 @@
+import { Link } from "react-router-dom";
+import { courses } from "./Database";
+
 export default function Dashboard() {
-  return (
-    <div id="wd-dashboard">
-      <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <h2 id="wd-dashboard-published">Published Courses (7)</h2> <hr />
-                    
-      <div id="wd-dashboard-courses" className="row">          
-      <div className="row row-cols-1 row-cols-md-5 g-4">
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
-        </div>
-      </div>
-    </div>
+    return (
 
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
-        </div>
-      </div>
-    </div>
+      <div id="wd-dashboard">
+        <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
+        <h2 id="wd-dashboard-published">Published Courses ({courses.length})</h2> <hr />
+                      
+        <div id="wd-dashboard-courses" className="row">  
 
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
-        </div>
-      </div>
-    </div>
+        <div className="row row-cols-1 row-cols-md-5 g-4">
 
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
-        </div>
-      </div>
-    </div>
+  {courses.map((course) => (<div className="wd-dashboard-course col" style={{ width: "300px" }}>
+  <Link to={`/Kanbas/Courses/${course._id}/Home`} className="text-decoration-none" >
+        <div className="card rounded-3 overflow-hidden">
+          <img src="/logo192.png"/>
+          <div className="card-body">
 
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
-        </div>
-      </div>
-    </div>
+          <span className="wd-dashboard-course-link"
+                      style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }} >
+                      {course.name}
+                    </span>
 
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
-        </div>
-      </div>
-    </div>
 
-    <div className="wd-dashboard-course col" style={{ width: "300px" }}>
-      <div className="card">
-        <img src="/logo192.png" alt="Course Logo" />
-        <div className="card-body">
-          <a className="wd-dashboard-course-link"
-             href="#/Kanbas/Courses/1234/Home"
-             style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
-               CS1234 React JS
-          </a>
-          <p className="wd-dashboard-course-title card-text">
-            Full Stack software developer
-          </p>
-          <p>Fall 2024 Section 1</p>
-          <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+            <p className="wd-dashboard-course-title card-text" style={{ maxHeight: 53, overflow: "hidden" }}>
+              {course.description}
+            </p>
+            <a href="#/Kanbas/Courses/1234/Home" className="btn btn-primary"> Go </a>
+          </div>
         </div>
-      </div>
-    </div>
+</Link>
 
- </div>
-    </div>
-    </div>
-  );
-}
+
+  </div>))}
+
+   </div>
+      </div>
+      </div>
+  );}

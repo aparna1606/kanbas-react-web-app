@@ -1,67 +1,37 @@
+import ModuleControlButtons from "./ModuleControlButtons"; 
+import LessonControlButtons from "./LessonControlButtons";
+import { BsGripVertical } from 'react-icons/bs';
 import ModulesControls from "./ModulesControls";
+import { useParams } from "react-router";
+import { modules } from "../../Database";
+
 
 export default function Modules() {
+  const { cid } = useParams();
+  const courseModules = modules.filter((module) => module.course === cid);
+
     return (
-      <div>
+      <div id="wd-modules">
+      <ModulesControls /><br /><br /><br /><br />
+      <ul id="wd-modules" className="list-group rounded-0">
         
+        {courseModules.map((module) => (
+        <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
+          <div className="wd-title p-3 ps-2 bg-secondary">
+          <BsGripVertical className="me-2 fs-3" />
+        {module.name}
+        <ModuleControlButtons />
 
-
-        <ModulesControls /><br /><br /><br /><br />
-        <ul id="wd-modules" className="list-group rounded-0">
-    <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
-      <div className="wd-title p-3 ps-2 bg-secondary"> Week 1 </div>
-      <ul className="wd-lessons list-group rounded-0">
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          LEARNING OBJECTIVES </li>
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          Introduction to the course </li>
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          Learn what is Web Development </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 1 </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 2 </li>
+          </div>
+          {module.lessons && <ul className="wd-lessons list-group rounded-0">
+            {module.lessons.map((lessons) => <li className="wd-lesson list-group-item p-3 ps-1">
+            <BsGripVertical className="me-2 fs-3" />
+          {lessons.name}
+          <LessonControlButtons />
+            </li>)}
+          </ul>}
+        </li>
+        ))}
       </ul>
-    </li>
-    <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
-      <div className="wd-title p-3 ps-2 bg-secondary"> Week 2 </div>
-      <ul className="wd-lessons list-group rounded-0">
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          LEARNING OBJECTIVES </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 1 </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 2 </li>
-      </ul>
-    </li>
-    
-    <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
-      <div className="wd-title p-3 ps-2 bg-secondary"> Week 3 </div>
-      <ul className="wd-lessons list-group rounded-0">
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          LEARNING OBJECTIVES </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 1 </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 2 </li>
-      </ul>
-    </li>
-
-    <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
-      <div className="wd-title p-3 ps-2 bg-secondary"> Week 4 </div>
-      <ul className="wd-lessons list-group rounded-0">
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          LEARNING OBJECTIVES </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 1 </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 2 </li>
-      </ul>
-    </li>
-
-    <li className="wd-module list-group-item p-0 mb-5 fs-5 border-gray">
-      <div className="wd-title p-3 ps-2 bg-secondary"> Week 5 </div>
-      <ul className="wd-lessons list-group rounded-0">
-        <li className="wd-lesson list-group-item p-3 ps-1">
-          LEARNING OBJECTIVES </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 1 </li>
-        <li className="wd-lesson list-group-item p-3 ps-1"> LESSON 2 </li>
-      </ul>
-    </li>
-    
-    </ul>
-      </div>
-  );}
-  
+    </div>
+     );}
