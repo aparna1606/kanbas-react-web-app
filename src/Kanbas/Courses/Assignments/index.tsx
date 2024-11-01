@@ -12,7 +12,7 @@ import { useState } from "react";
 export default function Assignments() {
   const { cid } = useParams();
   const { assignments = [] } = useSelector((state: any) => state.assignmentReducer || {});
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [assignmentToDelete, setAssignmentToDelete] = useState(null);
 

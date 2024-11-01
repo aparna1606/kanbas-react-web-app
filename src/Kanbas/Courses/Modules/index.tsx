@@ -3,7 +3,6 @@ import LessonControlButtons from "./LessonControlButtons";
 import { BsGripVertical } from 'react-icons/bs';
 import ModulesControls from "./ModulesControls";
 import { useParams } from "react-router";
-import * as db from "../../Database";
 import { useState } from "react";
 import { addModule, editModule, updateModule, deleteModule }
   from "./reducer";

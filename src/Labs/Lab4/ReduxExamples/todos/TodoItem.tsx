@@ -1,5 +1,5 @@
 import { deleteTodo, setTodo } from "./todosReducer"
-import { UseDispatch, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 
 export default function TodoItem({
     todo,
