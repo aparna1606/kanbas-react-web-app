@@ -1,10 +1,10 @@
 import ModuleEditor from "./ModuleEditor";
 import { FaPlus, FaEye, FaSquareFull } from "react-icons/fa6";
 import { FaCheckCircle } from "react-icons/fa";
+
 export default function ModulesControls(
   { moduleName, setModuleName, addModule }:
     { moduleName: string; setModuleName: (title: string) => void; addModule: () => void; }
-
 ) {
   return (
     <div id="wd-modules-controls" className="text-nowrap">
@@ -24,31 +24,61 @@ export default function ModulesControls(
         </button>
         <ul className="dropdown-menu">
           <li>
-            <a id="wd-publish-all-modules-and-items-btn" className="dropdown-item" href="#">
+            <button
+              id="wd-publish-all-modules-and-items-btn"
+              className="dropdown-item"
+              onClick={() => {
+                // Add your publish all modules and items logic here
+              }}
+            >
               <FaCheckCircle style={{ top: "2px" }}
                 className="text-success me-1 fs-5" />
-
               Publish all modules and items
-            </a>
+            </button>
           </li>
           <li>
-            <a id="wd-publish-modules-only-button" className="dropdown-item" href = "#">
+            <button
+              id="wd-publish-modules-only-button"
+              className="dropdown-item"
+              onClick={() => {
+                // Add your publish modules only logic here
+              }}
+            >
               <FaCheckCircle style={{ top: "2px" }}
                 className="text-success me-1 fs-5" />
-
               Publish modules only
-            </a>
+            </button>
           </li>
-          {/* Create two more items with IDs wd-unpublish-all-modules-and-items and
-              wd-unpublish-modules-only with labels Unpublish all modules and items
-              and Unpublish modules only */}
+          {/* Add two more items for unpublishing */}
+          <li>
+            <button
+              id="wd-unpublish-all-modules-and-items"
+              className="dropdown-item"
+              onClick={() => {
+                // Add your unpublish all modules and items logic here
+              }}
+            >
+              Unpublish all modules and items
+            </button>
+          </li>
+          <li>
+            <button
+              id="wd-unpublish-modules-only"
+              className="dropdown-item"
+              onClick={() => {
+                // Add your unpublish modules only logic here
+              }}
+            >
+              Unpublish modules only
+            </button>
+          </li>
         </ul>
       </div>
-      <button id="wd-add-module-btn" className="btn btn-lg btn-secondary me-1 float-end">
+      <button id="wd-view-progress-btn" className="btn btn-lg btn-secondary me-1 float-end">
         <FaEye className="position-relative me-2" style={{ bottom: "1px" }} />
         View Progress
       </button>
-      <button id="wd-add-module-btn" className="btn btn-lg btn-secondary me-1 float-end">
+      <button id="wd-collapse-all-btn" className="btn btn-lg btn-secondary me-1 float-end">
         <FaSquareFull className="position-relative me-2" style={{ bottom: "1px" }} />
         Collapse All
       </button>
