@@ -63,9 +63,9 @@ export default function KanbasNavigation() {
   return (
     <div id="wd-kanbas-navigation" style={{ width: 105 }}
       className="list-group rounded-0 position-fixed bottom-0 top-0 d-none d-md-block bg-black z-2">
-      <a href="https://www.northeastern.edu/" id="wd-neu-link" target="_blank"
+      <a href="https://www.northeastern.edu/" id="wd-neu-link" target="_blank" rel="noreferrer"
         className="list-group-item bg-black border-0 text-center">
-        <img src="/NEUlogo.jpg" width="75px" />
+        <img src="/NEUlogo.jpg" width="75px" alt="NEU logo" />
       </a>
       <Link to="/Kanbas/Account" className={`list-group-item text-center border-0 bg-black
             ${pathname.includes("Account") ? "bg-white text-danger" : "bg-black text-white"}`}>

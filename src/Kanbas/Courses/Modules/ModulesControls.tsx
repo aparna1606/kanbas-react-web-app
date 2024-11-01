@@ -24,7 +24,7 @@ export default function ModulesControls(
         </button>
         <ul className="dropdown-menu">
           <li>
-            <a id="wd-publish-all-modules-and-items-btn" className="dropdown-item" href="#">
+            <a id="wd-publish-all-modules-and-items-btn" className="dropdown-item">
               <FaCheckCircle style={{ top: "2px" }}
                 className="text-success me-1 fs-5" />
 
@@ -32,7 +32,7 @@ export default function ModulesControls(
             </a>
           </li>
           <li>
-            <a id="wd-publish-modules-only-button" className="dropdown-item" href="#">
+            <a id="wd-publish-modules-only-button" className="dropdown-item">
               <FaCheckCircle style={{ top: "2px" }}
                 className="text-success me-1 fs-5" />
 

@@ -1,7 +1,7 @@
 import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { deleteAssignment } from "../Assignments/reducer";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate, useParams } from "react-router";
 export default function LessonControlButtons(deleteAssignmentId:any) {
   const {cid} = useParams();

@@ -4,7 +4,7 @@ import LessonControlButtons from "../Modules/LessonControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { GiNotebook } from "react-icons/gi";
 import AssignmentsControlButtons from "./AssignmentControl";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { FaTrash } from "react-icons/fa";
 import AssignmentDelete from "./AssignmentDelete";
 import { useState } from "react";
