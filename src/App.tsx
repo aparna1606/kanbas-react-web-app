@@ -18,8 +18,7 @@ function App() {
      </Routes>
     </div>
     </Provider>
-   </HashRouter
-   >
+   </HashRouter  >
    
   );
 }
