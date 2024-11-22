@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer";
 import { useState } from "react";
+import * as coursesClient from "../client";
+import * as assignmentsClient from "./client";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
@@ -34,6 +36,19 @@ export default function AssignmentEditor() {
     setCurrentAssignment(updated);
   };
 
+  const updateAssignmentClient = async () => {
+    await assignmentsClient.updateAssignment(currentAssignment);
+    dispatch(updateAssignment(currentAssignment));
+  };
+
+  const addAssignmentClient = async () => {
+    await coursesClient.createAssignmentForCourse(
+      cid as string,
+      currentAssignment
+    );
+    dispatch(addAssignment(currentAssignment));
+  };
+
   const saveAssignment = (currentAssignment: any) => {
     console.log(currentAssignment);
     if (
@@ -41,9 +56,9 @@ export default function AssignmentEditor() {
         (assignment: any) => assignment._id === currentAssignment._id
       )
     ) {
-      dispatch(updateAssignment(currentAssignment));
+      updateAssignmentClient();
     } else {
-      dispatch(addAssignment(currentAssignment));
+      addAssignmentClient();
     }
   };
 
@@ -224,8 +239,38 @@ export default function AssignmentEditor() {
                 />
               </div>
             </div>
-
-            
+            <div className="row g-3">
+              <div className="col-md-6">
+                <label htmlFor="wd-available_date">Available From</label>
+                <div className="input-group mb-4">
+                  <input
+                    type="date"
+                    id="wd-available_date"
+                    className="form-control"
+                    value={
+                      new Date(currentAssignment.available_date)
+                        .toISOString()
+                        .split("T")[0]
+                    }
+                    onChange={(e: any) => handleChange(e)}
+                  />
+                  {/* <span className="input-group-text">
+            <FaCalendarAlt />
+          </span> */}
+                </div>
+              </div>
+              <div className="col-md-6">
+                <label htmlFor="wd-available_until">Until</label>
+                <div className="input-group mb-4">
+                  <input
+                    type="date"
+                    id="wd-available_until"
+                    className="form-control"
+                    onChange={(e: any) => handleChange(e)}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <hr />

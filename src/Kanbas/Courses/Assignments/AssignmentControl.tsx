@@ -5,7 +5,9 @@ export default function AssignmentsControls() {
     <div
       id="wd-assignment-controls"
       className="d-flex justify-content-between align-items-center mb-3"
-    >      <div className="input-group" style={{ maxWidth: "300px" }}>
+    >
+      {/* Search Bar */}
+      <div className="input-group" style={{ maxWidth: "300px" }}>
         <span
           className="input-group-text bg-white "
           style={{ borderRight: "none" }}
@@ -19,7 +21,11 @@ export default function AssignmentsControls() {
           className="form-control"
           style={{ backgroundColor: "white" }}
         />
-      </div>      <div className="d-flex">
+      </div>
+
+      {/* Buttons on the Right */}
+      <div className="d-flex">
+        {/* Group Button */}
         <div className="dropdown me-2">
           <button
             id="wd-assignment-group"
@@ -32,7 +38,10 @@ export default function AssignmentsControls() {
             />
             Group
           </button>
-        </div>        <button id="wd-assignment-add" className="btn btn-lg btn-danger">
+        </div>
+
+        {/* Assignment Button */}
+        <button id="wd-assignment-add" className="btn btn-lg btn-danger">
           <FaPlus
             className="position-relative me-2"
             style={{ bottom: "1px" }}

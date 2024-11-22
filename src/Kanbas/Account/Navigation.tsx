@@ -1,51 +1,53 @@
-// import { Link, useLocation } from "react-router-dom";
-// import { useSelector } from "react-redux";
-// import "./index.css";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-// export default function AccountNavigation() {
-//   // Extracting the current user state from Redux
-//   const { currentUser } = useSelector((state) => state.accountReducer);
-
-//   // Defining links based on whether the user is logged in
-//   const links = currentUser
-//     ? [{ label: "Profile", path: "/Kanbas/Account/Profile", id: "wd-account-profile-link" }]
-//     : [
-//         { label: "Signin", path: "/Kanbas/Account/Signin", id: "wd-account-signin-link" },
-//         { label: "Signup", path: "/Kanbas/Account/Signup", id: "wd-account-signup-link" },
-//       ];
-
-//   const { pathname } = useLocation();
-
-//   return (
-//     <div id="wd-account-navigation" className="list-group fs-5 rounded-0">
-//       {links.map((link) => (
-//         <Link
-//           key={link.id}
-//           to={link.path}
-//           id={link.id}
-//           className={`list-group-item border border-0 ${
-//             pathname === link.path ? "active" : "text-danger"
-//           }`}
-//         >
-//           {link.label}
-//         </Link>
-//       ))}
-//     </div>
-//   );
-// }
-
-import { Link, useLocation } from "react-router-dom";
 export default function AccountNavigation() {
-    const { pathname } = useLocation();
-    const links = ["Signin", "Signup", "Profile"];
-    return (
-        <div id="wd-account-navigation" className="wd list-group fs-5 rounded-0">
-            {links.map((link) => (
-                <Link to={`./${link}`}
-                    className={`list-group-item border border-0 ${pathname.includes(link) ? "active" : "text-danger"}`}>
-                    {link}
-                </Link>
-            ))}
-        </div>
-    );
-}  
+  const { pathname } = useLocation();
+  const { currentUser } = useSelector((state: any) => state.accountReducer);
+  const links = currentUser ? ["Profile"] : ["Signin", "Signup"];
+  return (
+    <div id="wd-account-navigation" className="wd list-group fs-5 rounded-0">
+      {links.map((link: string) => (
+        <>
+          <Link
+            to={`/Kanbas/Account/${link}`}
+            className={`list-group-item list-group-item-action border border-0
+        ${pathname.includes(link) ? "active text-black" : "text-danger"} `}
+          >
+            {" "}
+            {link}{" "}
+          </Link>
+          <br />
+        </>
+      ))}
+      {/* <Link
+        to={`/Kanbas/Account/Signin`}
+        className={`list-group-item list-group-item-action border border-0
+        ${pathname.includes("Signin") ? "active text-black" : "text-danger"} `}
+      >
+        {" "}
+        Signin{" "}
+      </Link>{" "}
+      <br />
+      <Link
+        to={`/Kanbas/Account/Signup`}
+        className={`list-group-item list-group-item-action border border-0
+        ${pathname.includes("Signup") ? "active text-black" : "text-danger"} `}
+      >
+        {" "}
+        Signup{" "}
+      </Link>{" "}
+      <br />
+      <Link
+        to={`/Kanbas/Account/Profile`}
+        className={`list-group-item list-group-item-action border border-0
+        ${pathname.includes("Profile") ? "active text-black" : "text-danger"} `}
+      >
+        {" "}
+        Profile{" "}
+      </Link>{" "}
+      <br /> */}
+    </div>
+  );
+}
