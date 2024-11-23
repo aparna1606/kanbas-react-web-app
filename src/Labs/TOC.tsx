@@ -31,7 +31,18 @@ export default function TOC() {
         <a id="wd-github" href="https://kanbas-node-server-web-app-1.onrender.com" className="nav-link" target="_blank">
           Server root link
         </a>
-      </li>
+            </li>
+            <li className="nav-item">
+        <a id="wd-github" href="https://github.com/aparna1606/kanbas-react-web-app" className="nav-link" target="_blank">
+          Github React Application
+        </a>
+            </li>
+            <li className="nav-item">
+        <a id="wd-github" href="https://github.com/aparna1606/kanbas-node-server-web-app" className="nav-link" target="_blank">
+          Github Node Application
+        </a>
+            </li>
+      
         </ul>
     );
 }
