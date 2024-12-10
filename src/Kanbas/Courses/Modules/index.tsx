@@ -14,7 +14,7 @@ import {
   setModules,
 } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
-import * as modulesClient from "./client"
+import * as modulesClient from "./client";
 
 export default function Modules() {
   const { cid } = useParams();
@@ -75,6 +75,7 @@ export default function Modules() {
                     }
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
+                        console.log(`latest updated module - ${module}`);
                         saveModule({ ...module, editing: false });
                       }
                     }}
